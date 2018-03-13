@@ -1,0 +1,24 @@
+{
+  "short_name": "Jason Nichols",
+  "name": "Jason Nichols for Congress",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "assets/img/48x48_icon.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "assets/img/96x96_icon.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "assets/img/hd_icon.png",
+      "type": "image/png",
+      "sizes": "192x192 72x72 144x144 128x128 256x256"
+    }
+  ],
+  "start_url": "index.php"
+}

@@ -1,0 +1,118 @@
+section.introduction {
+  position : relative;
+}
+
+section.introduction {
+  .left-col,
+  .right-col {
+    min-height          : 600px;
+    background-position : center;
+    background-size     : cover;
+  }
+
+  .left-col {
+    background-image : url('/img/soapbox.jpg');
+  }
+
+  .right-col {
+    background-image : url('/img/blacksuit_narrow.jpg');
+  }
+
+  div.triangle {
+    width      : 160px;
+    height     : 150px;
+    min-height : inherit;
+    color      : white;
+  }
+
+  span.triangle {
+    z-index           : 1;
+    position          : absolute;
+    right             : -15px;
+    bottom            : 0px;
+    width             : 150px;
+    height            : 140px;
+    -webkit-clip-path : polygon(100% 100%, 100% 0, 0 100%);
+    clip-path         : polygon(100% 100%, 100% 0, 0 100%);
+    padding-top       : 80px;
+    padding-right     : 25px;
+    padding-left      : 69px;
+    color             : $blue;
+    background-color  : white;
+    text-align        : right;
+    font-size         : 20px;
+    font-weight       : 500;
+    font-kerning      : none;
+    line-height       : 18px;
+  }
+
+  span.triangle a:hover {
+    color           : $lightblue;
+    text-decoration : none;
+  }
+
+  .voice-in-washington {
+    z-index  : 1;
+    position : absolute;
+    bottom   : 40px;
+    left     : 40px;
+    color    : white;
+  }
+
+  .voice-in-washington .social {
+    margin-top  : 40px;
+    margin-left : 20px;
+    text-align  : center;
+    font-size   : 34px;
+  }
+
+  .voice-in-washington a {
+    color      : white;
+    transition : color 300ms ease-in-out;
+  }
+
+  .voice-in-washington .fa:hover {
+    color : $lightblue;
+  }
+
+  .voice-in-washington span {
+    padding : 10px;
+  }
+
+  .voice-in-washington .box {
+    width   : 350px;
+    padding : 5px 20px;
+    border  : 3px solid white;
+  }
+
+  .voice-in-washington h3 {
+    margin-top  : 10px;
+    font-weight : 700;
+  }
+  @media (max-width: 768px) {
+    .voice-in-washington {
+      display : block;
+      bottom  : 100px;
+      left    : -15px;
+      padding : 0px;
+    }
+
+    .voice-in-washington .box {
+      border : none;
+    }
+
+    .voice-in-washington .social {
+      margin-top : 10px;
+    }
+
+    .triangle {
+      height : 28%;
+    }
+  }
+  @media (max-width: 350px) {
+    .voice-in-washington .box {
+      display : none;
+      padding : 0px;
+    }
+  }
+}
