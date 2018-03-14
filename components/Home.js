@@ -7,14 +7,16 @@ var lastUpdated = Date.now()
 class Home extends Component {
   constructor(){
     super()
-
-
   }
+
 
   render(){ //REQUIRED
     return (
-      <div>
-        <div>Home Page Stuff</div>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col">home one</div>
+          <div className="col">home two</div>
+        </div>
       </div>
     )
   }

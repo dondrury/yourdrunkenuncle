@@ -11,8 +11,10 @@ export default class Header extends Component{
 
   render(){
     return (
-      <header>
-        I'm the header
+      <header className="container-fluid">
+        <div className="row">
+          <div className="col">Header</div>
+        </div>
       </header>
     )
   }

@@ -40,11 +40,20 @@ var Home = function (_Component) {
       //REQUIRED
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'container-fluid' },
         _react2.default.createElement(
           'div',
-          null,
-          'Home Page Stuff'
+          { className: 'row' },
+          _react2.default.createElement(
+            'div',
+            { className: 'col' },
+            'home one'
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col' },
+            'home two'
+          )
         )
       );
     }

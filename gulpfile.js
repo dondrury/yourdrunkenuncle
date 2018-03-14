@@ -12,9 +12,9 @@ gulp.task('default', ['watch']) //watch is a dependant task and runs first!
 
 gulp.task('watch', () =>{
   gulp.watch(['scss/*.scss','scss/*.css'], ['build-sass']);
-  gulp.watch(['components/*','client.js'], ['build-client'])
-  gulp.watch(['server.js','routes.js'], ['build-server'])
-  gulp.watch(['components/*'], ['build-components'])
+  gulp.watch(['components/*','client.js'], ['build-client','build-components'])
+  gulp.watch(['server.js','routes.js'], ['build-server','build-components'])
+
   gulp.watch(['views/*'], ['build-views'])
 })
 
@@ -40,10 +40,10 @@ gulp.task('build-client',function(){
       })
       .bundle()
       .pipe(source('bundle.js'))
-      .pipe(buffer())
-      .pipe(sourcemaps.init())
-      .pipe(uglify())
-      .pipe(sourcemaps.write('.'))
+      // .pipe(buffer())
+      // .pipe(sourcemaps.init())
+      // .pipe(uglify())
+      // .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('dist/static/js'))
 })
 

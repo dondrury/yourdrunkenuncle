@@ -10,11 +10,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = require('react-router');
-
 var _Header = require('./Header');
 
 var _Header2 = _interopRequireDefault(_Header);
+
+var _Footer = require('./Footer');
+
+var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45,11 +47,7 @@ var Layout = function (_Component) {
           { id: 'gnm-main-body' },
           this.props.children
         ),
-        _react2.default.createElement(
-          'div',
-          null,
-          'Footer'
-        )
+        _react2.default.createElement(_Footer2.default, null)
       );
     }
   }]);

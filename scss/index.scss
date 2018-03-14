@@ -1,15 +1,9 @@
-/* colors */
-$blue: #0053a1;
-$lightblue: #507fd3;
-$darkblue:  #002c72;
-$green:#00853e;
-$lightgreen:  #4ab66a;
-$darkgreen: #005714;
-$extradarkgreen:  #002b0a;
-
-@import  "bootstrap";
-@import  'font-awesome.min';
-@import  'global';
+/*!
+ * Copywrite 2018 Honorable Honu Productions
+ * Don and Briana Drury
+ * Sergio Angon
+ */
 
 
-/*# sourceMappingURL=css/entry.css.map */
+  @import "bootstrap/bootstrap-reboot";
+  @import "bootstrap/bootstrap-grid";
