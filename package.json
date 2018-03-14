@@ -5,6 +5,7 @@
   "main": "client.js",
   "scripts": {
     "start-production": "./node_modules/pm2/bin/pm2 start  dist/server.js",
+    "kill-production": "./node_modules/pm2/bin/pm2 kill",
     "start": "./node_modules/gulp/bin/gulp.js & nodemon dist/server.js"
   },
   "repository": {

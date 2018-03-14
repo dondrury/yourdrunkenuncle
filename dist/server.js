@@ -35,7 +35,6 @@ var server = new _http.Server(app);
 
 app.set('view engine', 'ejs');
 app.set('views', _path2.default.join(__dirname, 'views'));
-
 // define the folder that will be used for static assets
 app.use(_express2.default.static(_path2.default.join(__dirname, 'static'))); //this is catching the root route!
 // universal routing and rendering

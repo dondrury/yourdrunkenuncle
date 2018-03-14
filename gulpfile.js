@@ -79,3 +79,5 @@ gulp.task('build-views',function(){
   return gulp.src(['views/*'])
         .pipe(gulp.dest('dist/views'))
 })
+
+gulp.task('build',['build-client','build-server','build-components','build-sass'])
