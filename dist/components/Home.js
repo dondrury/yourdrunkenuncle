@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _nodeFetch = require('node-fetch');
+
+var _nodeFetch2 = _interopRequireDefault(_nodeFetch);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,13 +22,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var blogEntries = [];
+var lastUpdated = Date.now();
+
 var Home = function (_Component) {
   _inherits(Home, _Component);
 
   function Home() {
     _classCallCheck(this, Home);
 
-    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
   }
 
   _createClass(Home, [{
@@ -34,7 +41,11 @@ var Home = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'Home Page'
+        _react2.default.createElement(
+          'div',
+          null,
+          'Home Page Stuff'
+        )
       );
     }
   }]);

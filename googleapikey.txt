@@ -1,0 +1,4 @@
+qAIzaSyDxP53eK9I0f5YDMZTEt7j-Dx3Of7GsE_c
+example query https://www.googleapis.com/fusiontables/v1/query?sql=SELECT%20*%20FROM%201LCiDe3q5o4YRYm0zaVnszaEwwBW_wU8N_FnOnmm5&key=AIzaSyDxP53eK9I0f5YDMZTEt7j-Dx3Of7GsE_c
+example from blogger
+https://www.googleapis.com/blogger/v3/blogs/4196086360428346825/posts?key=AIzaSyDxP53eK9I0f5YDMZTEt7j-Dx3Of7GsE_c

@@ -38,13 +38,10 @@ app.set('views', _path2.default.join(__dirname, 'views'));
 
 // define the folder that will be used for static assets
 app.use(_express2.default.static(_path2.default.join(__dirname, 'static'))); //this is catching the root route!
-
-
 // universal routing and rendering
 app.get('*', function (req, res) {
 
   (0, _reactRouter.match)({ routes: _routes2.default, location: req.url }, function (err, redirectLocation, renderProps) {
-
     // in case of error display the error message
     if (err) {
       return res.status(500).send(err.message);
@@ -58,7 +55,6 @@ app.get('*', function (req, res) {
     var markup = "";
     if (renderProps) {
       // if the current route matched we have renderProps
-
       markup = (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps));
     } else {
       // otherwise we can render a 404 page

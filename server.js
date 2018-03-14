@@ -16,18 +16,14 @@ const server = new Server(app);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, 'static'))); //this is catching the root route!
-
-
 // universal routing and rendering
 app.get('*', (req, res) => {
 
   match(
     { routes, location: req.url },
     (err, redirectLocation, renderProps) => {
-
       // in case of error display the error message
       if (err) {
         return res.status(500).send(err.message);
@@ -41,7 +37,6 @@ app.get('*', (req, res) => {
       let markup =""
       if (renderProps) {
         // if the current route matched we have renderProps
-
         markup = renderToString(<RouterContext {...renderProps}  />);
       } else {
         // otherwise we can render a 404 page
