@@ -37,11 +37,7 @@ var Footer = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'row' },
-          _react2.default.createElement(
-            'div',
-            { className: 'col' },
-            'Footer'
-          )
+          _react2.default.createElement('div', { className: 'col' })
         )
       );
     }

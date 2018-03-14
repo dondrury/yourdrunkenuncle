@@ -7,7 +7,7 @@ export default class Footer extends Component{
     return(
       <footer className="container-fluid">
         <div className="row">
-          <div className="col">Footer</div>
+          <div className="col"></div>
         </div>
       </footer>
     )

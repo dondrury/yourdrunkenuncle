@@ -6,7 +6,6 @@ const browserify = require('browserify')
 const source = require('vinyl-source-stream');
 const buffer      = require('vinyl-buffer');
 const uglify      = require('gulp-uglify');
-const devServer = require('gulp-dev-server');
 
 gulp.task('default', ['watch']) //watch is a dependant task and runs first!
 
@@ -14,7 +13,6 @@ gulp.task('watch', () =>{
   gulp.watch(['scss/*.scss','scss/*.css'], ['build-sass']);
   gulp.watch(['components/*','client.js'], ['build-client','build-components'])
   gulp.watch(['server.js','routes.js'], ['build-server','build-components'])
-
   gulp.watch(['views/*'], ['build-views'])
 })
 

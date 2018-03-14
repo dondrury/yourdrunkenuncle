@@ -35,23 +35,14 @@ var Header = function (_Component) {
   _createClass(Header, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement(
-        "header",
-        { className: "container-fluid" },
-        _react2.default.createElement(
-          "div",
-          { className: "row" },
-          _react2.default.createElement(
-            "div",
-            { className: "col" },
-            "Header"
-          )
-        )
-      );
+      return _react2.default.createElement("header", { className: "container-fluid" });
     }
   }]);
 
   return Header;
 }(_react.Component);
+
+//  <img className="img-fluid logo" src="img/logo.png" />
+
 
 exports.default = Header;

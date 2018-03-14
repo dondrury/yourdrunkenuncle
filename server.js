@@ -8,14 +8,12 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import routes from './routes';
 import NotFoundPage from './components/NotFoundPage';
-
 // initialize the server and configure support for ejs templates
 const app = new Express();
 const server = new Server(app);
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, 'static'))); //this is catching the root route!
 // universal routing and rendering

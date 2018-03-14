@@ -8,14 +8,12 @@ export default class Header extends Component{
     }
   }
 
-
   render(){
     return (
       <header className="container-fluid">
-        <div className="row">
-          <div className="col">Header</div>
-        </div>
       </header>
     )
   }
 }
+
+//  <img className="img-fluid logo" src="img/logo.png" />

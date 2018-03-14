@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
-import fetch from 'node-fetch';
-
-var blogEntries = [];
-var lastUpdated = Date.now()
 
 class Home extends Component {
-  constructor(){
-    super()
-  }
+  // constructor(){
+  //   super()
+  // }
 
 
   render(){ //REQUIRED
     return (
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col">home one</div>
-          <div className="col">home two</div>
-        </div>
+      <div className="home-page">
+        <img className="img-fluid" src="img/blacksuits.jpg" />
       </div>
+
     )
   }
 }
