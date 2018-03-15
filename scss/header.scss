@@ -4,12 +4,13 @@ header{
 
 header{
   a{
+    z-index: 1;
     position: absolute;
     top:30px;
     right:0px;
     width:160px;
+    transition: 2000ms ease-in-out;
   }
-
 
 
   @media (max-width: 567px){

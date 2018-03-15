@@ -27,8 +27,13 @@ var Header = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
     _this.state = {
-      open: false
+      open: false,
+      width: '160px'
     };
+
+    var timer = setTimeout(function () {
+      _this.setState({ width: '100%' });
+    }, 500);
     return _this;
   }
 
@@ -40,7 +45,7 @@ var Header = function (_Component) {
         { className: 'container-fluid' },
         _react2.default.createElement(
           'a',
-          { href: 'https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ' },
+          { href: 'https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ', style: { width: this.state.width } },
           _react2.default.createElement('img', { className: 'img-fluid logo', src: 'img/logo.png' })
         )
       );

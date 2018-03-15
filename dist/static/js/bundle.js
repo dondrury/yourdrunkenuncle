@@ -152,8 +152,13 @@ var Header = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
     _this.state = {
-      open: false
+      open: false,
+      width: '160px'
     };
+
+    var timer = setTimeout(function () {
+      _this.setState({ width: '100%' });
+    }, 500);
     return _this;
   }
 
@@ -165,7 +170,7 @@ var Header = function (_Component) {
         { className: 'container-fluid' },
         _react2.default.createElement(
           'a',
-          { href: 'https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ' },
+          { href: 'https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ', style: { width: this.state.width } },
           _react2.default.createElement('img', { className: 'img-fluid logo', src: 'img/logo.png' })
         )
       );
@@ -204,23 +209,25 @@ var Home = function (_Component) {
   function Home() {
     _classCallCheck(this, Home);
 
-    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
+
+    _this.state = {
+      opacity: 1
+    };
+    var timer = setTimeout(function () {
+      _this.setState({ opacity: 0 });
+    }, 500);
+    return _this;
   }
 
   _createClass(Home, [{
     key: "render",
-
-    // constructor(){
-    //   super()
-    // }
-
-
     value: function render() {
       //REQUIRED
       return _react2.default.createElement(
         "div",
         { className: "home-page" },
-        _react2.default.createElement("img", { className: "img-fluid", src: "img/blacksuits.jpg" })
+        _react2.default.createElement("img", { className: "img-fluid", src: "img/blacksuits.jpg", style: { opacity: this.state.opacity } })
       );
     }
   }]);

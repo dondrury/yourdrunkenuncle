@@ -24,23 +24,25 @@ var Home = function (_Component) {
   function Home() {
     _classCallCheck(this, Home);
 
-    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
+
+    _this.state = {
+      opacity: 1
+    };
+    var timer = setTimeout(function () {
+      _this.setState({ opacity: 0 });
+    }, 500);
+    return _this;
   }
 
   _createClass(Home, [{
     key: "render",
-
-    // constructor(){
-    //   super()
-    // }
-
-
     value: function render() {
       //REQUIRED
       return _react2.default.createElement(
         "div",
         { className: "home-page" },
-        _react2.default.createElement("img", { className: "img-fluid", src: "img/blacksuits.jpg" })
+        _react2.default.createElement("img", { className: "img-fluid", src: "img/blacksuits.jpg", style: { opacity: this.state.opacity } })
       );
     }
   }]);

@@ -4,14 +4,17 @@ export default class Header extends Component{
   constructor(){
     super()
     this.state={
-      open: false
+      open: false,
+      width: '160px'
     }
+
+    var timer = setTimeout(()=>{this.setState({width:'100%'})},500)
   }
 
   render(){
     return (
       <header className="container-fluid">
-        <a href='https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ'>
+        <a href='https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ' style={{width: this.state.width}}>
           <img className="img-fluid logo" src="img/logo.png" />
         </a>
       </header>

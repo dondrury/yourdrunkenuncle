@@ -1370,16 +1370,19 @@ header {
   position: relative; }
 
 header a {
+  z-index: 1;
   position: absolute;
   top: 30px;
   right: 0px;
-  width: 160px; }
+  width: 160px;
+  transition: 2000ms ease-in-out; }
 
 @media (max-width: 567px) {
   header a {
     width: 100px; } }
 
 .home-page img {
-  width: 100%; }
+  width: 100%;
+  transition: opacity 2000ms ease-in-out; }
 
 /*# sourceMappingURL=index.css.map */
