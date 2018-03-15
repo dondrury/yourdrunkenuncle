@@ -1369,11 +1369,15 @@ html {
 header {
   position: relative; }
 
-header img {
+header a {
   position: absolute;
-  top: 0px;
-  left: 20px;
-  width: 200px; }
+  top: 30px;
+  right: 0px;
+  width: 160px; }
+
+@media (max-width: 567px) {
+  header a {
+    width: 100px; } }
 
 .home-page img {
   width: 100%; }
