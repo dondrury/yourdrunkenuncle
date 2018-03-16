@@ -9,7 +9,6 @@ class Home extends Component {
     var timer = setTimeout(()=>{this.setState({opacity:0})},500)
   }
 
-
   render(){ //REQUIRED
     return (
       <div className="home-page">

@@ -1369,19 +1369,33 @@ html {
 header {
   position: relative; }
 
-header a {
+header h1 {
+  z-index: 4;
+  text-align: center;
+  position: relative;
+  left: 100vw;
+  transition: all 2000ms ease-in-out; }
+
+header .logo {
   z-index: 1;
   position: absolute;
   top: 30px;
   right: 0px;
   width: 160px;
-  transition: 2000ms ease-in-out; }
+  transition: all 2000ms ease-in-out; }
 
 @media (max-width: 567px) {
-  header a {
-    width: 100px; } }
+  header .logo {
+    width: 100px; }
+  header h1 {
+    font-size: 23px; } }
+
+.home-page h1 {
+  text-align: center; }
 
 .home-page img {
+  position: absolute;
+  top: -30px;
   width: 100%;
   transition: opacity 2000ms ease-in-out; }
 

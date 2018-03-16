@@ -1,8 +1,17 @@
 
 .home-page{
+  h1{
+    text-align: center;
+  }
+
+
   img{
+    position: absolute;
+    top: -30px;
     width:100%;
     transition: opacity 2000ms ease-in-out;
   }
+
+
 
 }

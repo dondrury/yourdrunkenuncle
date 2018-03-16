@@ -3,19 +3,29 @@ header{
 }
 
 header{
-  a{
+  h1{
+    z-index: 4;
+    text-align: center;
+    position: relative;
+    left:100vw;
+    transition: all 2000ms ease-in-out;
+  }
+
+  .logo{
     z-index: 1;
     position: absolute;
     top:30px;
     right:0px;
     width:160px;
-    transition: 2000ms ease-in-out;
+    transition: all 2000ms ease-in-out;
   }
 
-
   @media (max-width: 567px){
-    a{
+    .logo{
       width: 100px;
+    }
+    h1{
+      font-size: 23px;
     }
   }
 
