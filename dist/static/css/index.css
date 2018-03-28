@@ -3,6 +3,11 @@
  * Don and Briana Drury
  * Sergio Angon
  */
+@font-face {
+  font-family: 'Riffic';
+  src: url("/fonts/riffic.otf");
+  /* IE9 Compat Modes */ }
+
 /*!
  * Bootstrap Reboot v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -1398,5 +1403,8 @@ header .logo {
   top: -30px;
   width: 100%;
   transition: opacity 2000ms ease-in-out; }
+
+body {
+  font-family: 'Riffic', Fallback, sans-serif; }
 
 /*# sourceMappingURL=index.css.map */
