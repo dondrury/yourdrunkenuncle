@@ -12,7 +12,8 @@ class Home extends Component {
   render(){ //REQUIRED
     return (
       <div className="home-page">
-        <img className="img-fluid" src="img/blacksuits.jpg" style={{opacity: this.state.opacity}}/>
+
+            <img className="img-fluid" src="img/blacksuits.jpg" style={{opacity: this.state.opacity}}/>
       </div>
 
     )

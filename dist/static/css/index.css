@@ -1404,6 +1404,9 @@ header .logo {
   width: 100%;
   transition: opacity 2000ms ease-in-out; }
 
+.home-page p {
+  text-indent: 1rem; }
+
 body {
   font-family: 'Riffic', Fallback, sans-serif; }
 
