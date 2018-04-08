@@ -2039,7 +2039,8 @@ header ul > li > a:hover {
   color: white; }
 
 .home-page .tours .content p {
-  padding: 5px 20px; }
+  padding: 5px 20px;
+  line-height: 23px; }
 
 .home-page .tours .title h2 {
   font-size: 38px;
