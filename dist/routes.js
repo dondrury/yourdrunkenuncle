@@ -22,6 +22,10 @@ var _Merch = require('./components/Merch');
 
 var _Merch2 = _interopRequireDefault(_Merch);
 
+var _Tours = require('./components/Tours');
+
+var _Tours2 = _interopRequireDefault(_Tours);
+
 var _NotFoundPage = require('./components/NotFoundPage');
 
 var _NotFoundPage2 = _interopRequireDefault(_NotFoundPage);
@@ -33,6 +37,7 @@ var routes = _react2.default.createElement(
     { path: '/', component: _Layout2.default },
     _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: 'merch', component: _Merch2.default }),
+    _react2.default.createElement(_reactRouter.Route, { path: 'tours', component: _Tours2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: '*', component: _NotFoundPage2.default })
 );
 

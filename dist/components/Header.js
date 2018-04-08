@@ -50,17 +50,8 @@ var Header = function (_Component) {
               null,
               _react2.default.createElement(
                 'a',
-                { href: '/' },
-                'WTF?'
-              )
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              _react2.default.createElement(
-                'a',
                 { href: '/tours' },
-                'Wander?'
+                'Tours'
               )
             ),
             _react2.default.createElement(
@@ -71,24 +62,6 @@ var Header = function (_Component) {
                 { href: '/merch' },
                 'Merch'
               )
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              _react2.default.createElement(
-                'a',
-                { href: '/cook' },
-                'YDU COOK?'
-              )
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              _react2.default.createElement(
-                'a',
-                { href: '/thoughts' },
-                'Ramblings'
-              )
             )
           )
         ),
@@ -97,7 +70,7 @@ var Header = function (_Component) {
           null,
           _react2.default.createElement(
             'a',
-            { className: 'logo', href: 'https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ' },
+            { className: 'logo', href: '/' },
             _react2.default.createElement('img', { src: this.state.collapsed ? "img/YDU-head.png" : "img/logo.png", style: { marginTop: '0px' } })
           )
         )

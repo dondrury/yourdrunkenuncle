@@ -14,6 +14,10 @@ var _Carousel = require('./Carousel');
 
 var _Carousel2 = _interopRequireDefault(_Carousel);
 
+var _Tours = require('./Tours');
+
+var _Tours2 = _interopRequireDefault(_Tours);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -59,44 +63,7 @@ var Home = function (_Component) {
           _react2.default.createElement('div', null)
         ),
         _react2.default.createElement(_Carousel2.default, null),
-        _react2.default.createElement(
-          'div',
-          { className: 'tours' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title push-down' },
-            _react2.default.createElement(
-              'h2',
-              null,
-              'TOURS'
-            ),
-            _react2.default.createElement(
-              'span',
-              { className: 'top' },
-              'Ireland Trip Itinerary'
-            ),
-            _react2.default.createElement(
-              'span',
-              { className: 'bottom' },
-              'Book Your Amazing Irish Vacation Today'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'pure-g content' },
-            _react2.default.createElement('div', { className: 'pure-u-1' }),
-            _react2.default.createElement('div', { className: 'pure-u-1 pure-u-md-1-2' }),
-            _react2.default.createElement(
-              'div',
-              { className: 'pure-u-1 pure-u-md-1-2' },
-              _react2.default.createElement(
-                'p',
-                null,
-                'Explore the unparalleled beauty, culture, and history of the Emerald Isle with your experienced and passionate hosts, Grant & Sloan. Meet the people and hear the stories that make Ireland such an unforgettable place.'
-              )
-            )
-          )
-        )
+        _react2.default.createElement(_Tours2.default, null)
       );
     }
   }]);

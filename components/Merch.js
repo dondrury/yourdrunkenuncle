@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
 
-class Merch extends Component {
+
+export default class Tours extends Component {
+  constructor(){
+    super()
+
+
+  }
+
   render(){ //REQUIRED
-    return (<div className='gnm-home'>
-              <div>Merch Body stuff</div>
-            </div>)
+    return (
+      <div className='merch'>
+        <div className='pure-g'>
+          <div className='pure-u-1 pure-u-md-1-2'>
+            
+          </div>
+          <div className='pure-u-1 pure-u-md-1-2'>
+
+          </div>
+        </div>
+      </div>
+    )
   }
 }
-
-export default Merch;

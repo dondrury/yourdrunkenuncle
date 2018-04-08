@@ -32,6 +32,7 @@ $light-blue:#92CACA;
   @import 'pure/grids-responsive';
   @import "header";
   @import "home";
+  @import 'tours';
   @import "carousel";
   @import "footer";
 
@@ -39,7 +40,7 @@ $light-blue:#92CACA;
     overflow-x: hidden;
   }
 
-  h1,h2{
+  h1,h2,h3{
     font-family: 'Riffic', Fallback, sans-serif;
   }
 

@@ -5,10 +5,9 @@ import React, {Component} from 'react';
 export default class Footer extends Component{
   render(){
     return(
-      <footer className="container-fluid">
-        <div className="row">
-          <div className="col"></div>
-        </div>
+      <footer >
+        <img src='img/Logo_lighten.png' />
+        
       </footer>
     )
   }

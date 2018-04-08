@@ -33,12 +33,8 @@ var Footer = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'footer',
-        { className: 'container-fluid' },
-        _react2.default.createElement(
-          'div',
-          { className: 'row' },
-          _react2.default.createElement('div', { className: 'col' })
-        )
+        null,
+        _react2.default.createElement('img', { src: 'img/Logo_lighten.png' })
       );
     }
   }]);

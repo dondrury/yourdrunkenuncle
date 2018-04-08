@@ -18,32 +18,33 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Merch = function (_Component) {
-  _inherits(Merch, _Component);
+var Tours = function (_Component) {
+  _inherits(Tours, _Component);
 
-  function Merch() {
-    _classCallCheck(this, Merch);
+  function Tours() {
+    _classCallCheck(this, Tours);
 
-    return _possibleConstructorReturn(this, (Merch.__proto__ || Object.getPrototypeOf(Merch)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Tours.__proto__ || Object.getPrototypeOf(Tours)).call(this));
   }
 
-  _createClass(Merch, [{
+  _createClass(Tours, [{
     key: 'render',
     value: function render() {
       //REQUIRED
       return _react2.default.createElement(
         'div',
-        { className: 'gnm-home' },
+        { className: 'merch' },
         _react2.default.createElement(
           'div',
-          null,
-          'Merch Body stuff'
+          { className: 'pure-g' },
+          _react2.default.createElement('div', { className: 'pure-u-1 pure-u-md-1-2' }),
+          _react2.default.createElement('div', { className: 'pure-u-1 pure-u-md-1-2' })
         )
       );
     }
   }]);
 
-  return Merch;
+  return Tours;
 }(_react.Component);
 
-exports.default = Merch;
+exports.default = Tours;
