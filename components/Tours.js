@@ -15,8 +15,8 @@ export default class Tours extends Component {
           <div className='title push-down'>
             <h2>TOURS
             </h2>
-            <span className='top'>Ireland Trip Itinerary</span>
-            <span className='bottom'>Book Your Amazing Irish Vacation Today</span>
+            <span className='top'>Book Your Amazing </span>
+            <span className='bottom'>Irish Odyssey Now</span>
           </div>
           <div className="pure-g content">
 

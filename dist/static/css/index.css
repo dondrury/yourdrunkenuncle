@@ -2043,7 +2043,7 @@ header ul > li > a:hover {
 .tours .title h2 {
   font-size: 38px;
   display: inline-block;
-  width: 410px;
+  width: 291px;
   height: 1px; }
 
 .tours .content h3 {
@@ -2076,10 +2076,6 @@ header ul > li > a:hover {
   position: relative;
   border-bottom: 4px solid #92CACA;
   margin-right: 33px; }
-
-@media (max-width: 500px) {
-  .tours .title {
-    margin-right: -48px; } }
 
 .tours .title span {
   position: absolute;

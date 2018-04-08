@@ -45,12 +45,12 @@ var Tours = function (_Component) {
           _react2.default.createElement(
             'span',
             { className: 'top' },
-            'Ireland Trip Itinerary'
+            'Book Your Amazing '
           ),
           _react2.default.createElement(
             'span',
             { className: 'bottom' },
-            'Book Your Amazing Irish Vacation Today'
+            'Irish Odyssey Now'
           )
         ),
         _react2.default.createElement(
