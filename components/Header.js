@@ -4,22 +4,43 @@ export default class Header extends Component{
   constructor(){
     super()
     this.state={
-      open: false,
-      width: '160px',
-      left: '100vw'
+      collapsed: false
     }
-    var timer = setTimeout(()=>{this.setState({width:'100%',left:'0vw'})},500)
+
+
+
   }
+
 
   render(){
     return (
-      <header className="container-fluid">
-        <h1 style={{left: this.state.left}}><a href="mailto:yourdrunkenuncle@gmail.com">YDU Tours Coming Soon</a></h1>
+      <header className={this.state.collapsed ? 'collapsed' : ''}>
+        <div>
+          <ul>
+            <li>
+              <a href="/">WTF?</a>
+            </li>
+            <li>
+              <a href="/tours">Wander?</a>
+            </li>
+            <li>
+              <a href="/merch">Merch</a>
+            </li>
+            <li>
+              <a href="/cook">YDU COOK?</a>
+            </li>
+            <li>
+              <a href="/thoughts">Ramblings</a>
+            </li>
+          </ul>
+        </div>
 
-        <a className='logo' href='https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ' style={{width: this.state.width}}>
+        <div>
+          <a className='logo' href='https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ'>
+            <img  src={this.state.collapsed ? "img/YDU-head.png" : "img/logo.png"} style={{marginTop:'0px'}}/>
+          </a>
+        </div>
 
-          <img className="img-fluid" src="img/logo.png" />
-        </a>
       </header>
     )
   }

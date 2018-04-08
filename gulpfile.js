@@ -12,7 +12,7 @@ const clean = require('gulp-clean')
 gulp.task('default', ['watch']) //watch is a dependant task and runs first!
 
 gulp.task('watch', () =>{
-  gulp.watch(['scss/*.scss','scss/*.css'], ['build-sass']);
+  gulp.watch(['scss/*.scss','scss/*.css','scss/**/*.css','scss/**/*.scss'], ['build-sass']);
   gulp.watch(['components/*.js','client.js'], ['build-components','build-client'])
   gulp.watch(['server.js'], ['build-components','build-server'])
   gulp.watch(['routes.js'], ['build-components','build-server','build-client'])

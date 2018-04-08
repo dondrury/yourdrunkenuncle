@@ -27,13 +27,9 @@ var Header = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
     _this.state = {
-      open: false,
-      width: '160px',
-      left: '100vw'
+      collapsed: false
     };
-    var timer = setTimeout(function () {
-      _this.setState({ width: '100%', left: '0vw' });
-    }, 500);
+
     return _this;
   }
 
@@ -42,20 +38,68 @@ var Header = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'header',
-        { className: 'container-fluid' },
+        { className: this.state.collapsed ? 'collapsed' : '' },
         _react2.default.createElement(
-          'h1',
-          { style: { left: this.state.left } },
+          'div',
+          null,
           _react2.default.createElement(
-            'a',
-            { href: 'mailto:yourdrunkenuncle@gmail.com' },
-            'YDU Tours Coming Soon'
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'a',
+                { href: '/' },
+                'WTF?'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'a',
+                { href: '/tours' },
+                'Wander?'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'a',
+                { href: '/merch' },
+                'Merch'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'a',
+                { href: '/cook' },
+                'YDU COOK?'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                'a',
+                { href: '/thoughts' },
+                'Ramblings'
+              )
+            )
           )
         ),
         _react2.default.createElement(
-          'a',
-          { className: 'logo', href: 'https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ', style: { width: this.state.width } },
-          _react2.default.createElement('img', { className: 'img-fluid', src: 'img/logo.png' })
+          'div',
+          null,
+          _react2.default.createElement(
+            'a',
+            { className: 'logo', href: 'https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ' },
+            _react2.default.createElement('img', { src: this.state.collapsed ? "img/YDU-head.png" : "img/logo.png", style: { marginTop: '0px' } })
+          )
         )
       );
     }

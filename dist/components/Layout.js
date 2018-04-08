@@ -44,7 +44,7 @@ var Layout = function (_Component) {
         _react2.default.createElement(_Header2.default, null),
         _react2.default.createElement(
           'div',
-          { id: 'gnm-main-body' },
+          { id: 'ydu-main-body' },
           this.props.children
         ),
         _react2.default.createElement(_Footer2.default, null)

@@ -2,21 +2,106 @@
 
 
 .home-page{
-  h1{
-    text-align: center;
+  &{
+    height:200vh;
+
   }
-
-
-  img{
-    position: absolute;
-    top: -30px;
+  .logo {
     width:100%;
-    transition: opacity 2000ms ease-in-out;
+    border-bottom: 1px solid lightgrey ;
+  }
+  .logo img{
+    display: block;
+    margin-top: 30px;
+    width:40vw;
+    margin-left: auto;
+    margin-right: auto;
+
   }
 
-  p{
-    text-indent: 1rem;
+  .sub-logo{
+    padding-bottom: 159px;
   }
+
+  .sub-logo img{
+    margin-top: 12px;
+  }
+
+  .sub-logo h1{
+    text-align: center;
+    color: $blue;
+  }
+
+  div.ribbon{
+    background-color: $dark-red;
+
+    padding-bottom: 15px;
+    padding-top: 25px;
+  }
+
+  div.ribbon > div{
+    background-color: $light-red;
+    height: 40px;
+
+
+  }
+
+
+  .tours{
+    border-top: 1px solid lightgrey;
+    background-image: url('/img/Tour_BKG.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+  }
+
+  .tours .content{
+    margin-top: 291px;
+    color:white;
+    
+  }
+
+  .tours .content p{
+    padding: 5px 20px;
+  }
+
+  .tours .title h2{
+    font-size: 38px;
+    display: inline-block;
+    width: 396px;;
+    height: 1px;
+
+
+  }
+  .tours .title{
+      margin-top: 170px;
+    display: inline-block;
+    float:right;
+    position: relative;
+    border-bottom: 4px solid $light-blue;
+    margin-right: 33px;
+
+  }
+
+  .tours .title span{
+    position:   absolute;
+    display: block;
+    font-size: 14px;
+  }
+
+  .tours .title span.top{
+    bottom: 17px;
+    left: 136px;
+  }
+
+  .tours .title span.bottom{
+    bottom: 2px;
+    left: 136px;
+  }
+
+
+
 
 
 

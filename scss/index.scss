@@ -3,6 +3,16 @@
  * Don and Briana Drury
  * Sergio Angon
  */
+
+
+ $dark-red : #6A1112;
+$middle-red: #A83A3A;
+$light-red: #B96161;
+
+$blue: #4A8A8A;
+$light-blue:#92CACA;
+
+
  @font-face {
   font-family: 'Riffic';
   src: url('/fonts/riffic.otf'); /* IE9 Compat Modes */
@@ -14,15 +24,25 @@
 }
 
 
-
-  @import "bootstrap/bootstrap-reboot";
-  @import "bootstrap/bootstrap-grid";
-  @import "bootstrap/images";
+  //
+  // @import "bootstrap/bootstrap-reboot";
+  // @import "bootstrap/bootstrap-grid";
+  // @import "bootstrap/images";
+  @import 'pure/pure';
+  @import 'pure/grids-responsive';
   @import "header";
   @import "home";
+  @import "carousel";
   @import "footer";
 
-  
   body{
+    overflow-x: hidden;
+  }
+
+  h1,h2{
     font-family: 'Riffic', Fallback, sans-serif;
+  }
+
+  a{
+    font-weight: 500;
   }

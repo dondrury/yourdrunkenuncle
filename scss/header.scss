@@ -1,32 +1,57 @@
-header{
-  position: relative;
-}
+
 
 header{
-  h1{
-    z-index: 4;
+
+  &{
+
+  }
+
+  ul{
+    text-align: right;
+    margin: 16px 0 ;
+    padding: 0 10px;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+
+  a.logo{
     text-align: center;
-    position: relative;
-    left:100vw;
-    transition: all 2000ms ease-in-out;
+
   }
 
-  .logo{
-    z-index: 1;
-    position: absolute;
-    top:30px;
-    right:0px;
-    width:160px;
-    transition: all 2000ms ease-in-out;
+  a.logo img{
+    margin: 30px auto;
+    width: 100px;
+    display: block;
   }
+
+  ul > li{
+    list-style: none;
+    display: inline
+  }
+
+  ul > li > a{
+    padding: 0 5px;
+    text-decoration: none;
+    color:black;
+
+  }
+
+  ul > li > a:hover{
+    text-decoration: none;
+
+  }
+
+
 
   @media (max-width: 567px){
-    .logo{
-      width: 100px;
+
+    ul{
+      text-align: center;
+
     }
-    h1{
-      font-size: 23px;
-    }
+
+    
   }
 
 }

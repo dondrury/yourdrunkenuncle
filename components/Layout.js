@@ -8,7 +8,7 @@ export default class Layout extends Component {
     return (
       <div >
         <Header></Header>
-        <div id='gnm-main-body' >
+        <div id='ydu-main-body' >
           {this.props.children}
         </div>
         <Footer></Footer>
