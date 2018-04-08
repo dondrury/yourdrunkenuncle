@@ -5,7 +5,6 @@ class Home extends Component {
   constructor(){
     super()
 
-
   }
 
   render(){ //REQUIRED
