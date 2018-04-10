@@ -30,7 +30,6 @@ header{
 
   a.logo{
     text-align: center;
-
   }
 
   a.logo img{
@@ -57,10 +56,10 @@ header{
 
 
 
-  @media (max-width: 567px){
+  @media (max-width: 700px){
 
-    ul{
-      text-align: center;
+    a.logo{
+      display: none;
 
     }
 
