@@ -1962,10 +1962,27 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .pure-u-xl-24-24 {
     width: 100%; } }
 
+#ydu-main-body {
+  padding-top: 20px; }
+
+header {
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  width: 100vw;
+  height: 48px;
+  z-index: 1000; }
+
+header img {
+  float: left;
+  width: 60px;
+  margin: 12px 20px; }
+
 header ul {
-  text-align: right;
-  margin: 16px 0;
-  padding: 0 10px;
+  float: right;
+  /* text-align: right; */
+  margin: 16px 48px;
+  /* padding: 0 10px; */
   word-break: keep-all;
   white-space: nowrap; }
 

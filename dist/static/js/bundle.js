@@ -192,7 +192,7 @@ var Footer = function (_Component) {
 exports.default = Footer;
 
 },{"react":420}],5:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -200,7 +200,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -218,62 +218,53 @@ var Header = function (_Component) {
   function Header() {
     _classCallCheck(this, Header);
 
-    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
-
-    _this.state = {
-      collapsed: false
-    };
-
-    return _this;
+    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
   }
 
   _createClass(Header, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'header',
-        { className: this.state.collapsed ? 'collapsed' : '' },
+        "header",
+        null,
         _react2.default.createElement(
-          'div',
+          "ul",
           null,
           _react2.default.createElement(
-            'ul',
+            "li",
             null,
             _react2.default.createElement(
-              'li',
-              null,
-              _react2.default.createElement(
-                'a',
-                { href: '/tours' },
-                'Tours'
-              )
-            ),
+              "a",
+              { href: "/tours" },
+              "Tours"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
             _react2.default.createElement(
-              'li',
-              null,
-              _react2.default.createElement(
-                'a',
-                { href: '/merch' },
-                'Merch'
-              )
+              "a",
+              { href: "/merch" },
+              "Merch"
             )
           )
         ),
-        _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(
-            'a',
-            { className: 'logo', href: '/' },
-            _react2.default.createElement('img', { src: this.state.collapsed ? "img/YDU-head.png" : "img/logo.png", style: { marginTop: '0px' } })
-          )
-        )
+        _react2.default.createElement("img", { src: "img/YDU-head.png" })
       );
     }
   }]);
 
   return Header;
 }(_react.Component);
+
+/*
+<div>
+  <a className='logo' href='/'>
+    <img  src={this.state.collapsed ? "img/YDU-head.png" : "img/logo.png"} style={{marginTop:'0px'}}/>
+  </a>
+</div>
+*/
+
 
 exports.default = Header;
 
