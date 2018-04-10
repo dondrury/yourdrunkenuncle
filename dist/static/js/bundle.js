@@ -249,7 +249,12 @@ var Header = function (_Component) {
             )
           )
         ),
-        _react2.default.createElement("img", { src: "img/YDU-head.png" })
+        _react2.default.createElement("img", { src: "img/YDU-head.png" }),
+        _react2.default.createElement(
+          "a",
+          { className: "logo", href: "" },
+          _react2.default.createElement("img", { src: "img/Subscribe.png" })
+        )
       );
     }
   }]);
@@ -315,13 +320,8 @@ var Home = function (_Component) {
         { className: 'home-page' },
         _react2.default.createElement(
           'div',
-          { className: 'logo' },
-          _react2.default.createElement('img', { src: 'img/YDU-head.png' })
-        ),
-        _react2.default.createElement(
-          'div',
           { className: 'logo sub-logo' },
-          _react2.default.createElement('img', { src: 'img/Subscribe.png' }),
+          _react2.default.createElement('img', { src: 'img/logo.png' }),
           _react2.default.createElement(
             'h1',
             null,

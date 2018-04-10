@@ -21,7 +21,10 @@ export default class Header extends Component{
             </li>
 
           </ul>
-          <img src="img/YDU-head.png"></img>
+          <img src="img/YDU-head.png" />
+          <a className="logo" href="">
+            <img  src="img/Subscribe.png" />
+          </a>
 
 
       </header>

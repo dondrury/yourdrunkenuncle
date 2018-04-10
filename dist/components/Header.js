@@ -55,7 +55,12 @@ var Header = function (_Component) {
             )
           )
         ),
-        _react2.default.createElement("img", { src: "img/YDU-head.png" })
+        _react2.default.createElement("img", { src: "img/YDU-head.png" }),
+        _react2.default.createElement(
+          "a",
+          { className: "logo", href: "" },
+          _react2.default.createElement("img", { src: "img/Subscribe.png" })
+        )
       );
     }
   }]);

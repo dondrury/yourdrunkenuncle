@@ -1963,7 +1963,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 100%; } }
 
 #ydu-main-body {
-  padding-top: 20px; }
+  padding-top: 48px; }
 
 header {
   position: fixed;
@@ -1990,9 +1990,8 @@ header a.logo {
   text-align: center; }
 
 header a.logo img {
-  margin: 30px auto;
-  width: 100px;
-  display: block; }
+  margin: 14px;
+  width: 267px; }
 
 header ul > li {
   list-style: none;

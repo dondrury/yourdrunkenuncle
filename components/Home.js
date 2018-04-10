@@ -6,17 +6,14 @@ class Home extends Component {
   constructor(){
     super()
 
-
   }
 
   render(){ //REQUIRED
     return (
       <div className="home-page">
-        <div className='logo'>
-            <img  src='img/YDU-head.png'/>
-        </div>
+      
         <div className='logo sub-logo'>
-            <img  src='img/Subscribe.png'/>
+            <img  src='img/logo.png'/>
             <h1>Life through the bibulous perspective of Grant & Sloan</h1>
         </div>
 
