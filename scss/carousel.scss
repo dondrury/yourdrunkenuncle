@@ -1,38 +1,10 @@
 
   section.carousel{
     &{
-    }
-
-    .videos > iframe{
-      display: inline;
-      width: 300px;
-      height:169px;
-      border: none;
-      margin-top:-10px;
-      margin-bottom: 10px;
-      margin-left: 8px;
-      margin-right:8px;
 
     }
-    .videos{
-      margin-top: -202px;
-      padding-left: 10vw;
-    }
-    @media (max-width: 1200px){
 
-      .videos{
-        padding-left: 0px;
-      }
-     .videos > iframe{
-        display: none;
-      }
 
-     .videos >  iframe:first-child{
-        display: block;
-        margin: 0 auto;
-      }
-
-    }
 
     .feature{
       background-color: $middle-red;
@@ -43,17 +15,20 @@
       width: 400px;
       height: 200px;
       position: relative;
-
+      z-index: 1;
       top: -201px;
+      margin-bottom: -201px;;
     }
-
-    div.feature iframe{
-      border: none;
-      overflow: hidden;
+    .feature iframe{
       border-radius: 5px;
+      border: none;
+      z-index: auto;
+      padding:0px;
+      position: relative;
+      right: auto;
+      top:0px;
       width: 100%;
       height:100%;
-
     }
 
     div.feature:after{
@@ -73,6 +48,27 @@
     div.feature:hover:after{
       display: none;
     }
+    .videos{
+      position: relative;
+      left: calc(50vw - 160px);
+      height: 200px;
+      top: -11px;
+    }
+
+
+    .videos iframe{
+      border: none;
+      overflow: hidden;
+      position: absolute;
+      width: 321px;
+      height: 178px;
+      z-index: -1;
+
+
+      padding: 0 5px;
+      transition: all 2000ms ease-in-out;
+    }
+
 
     @media (max-width: 470px){
       div.feature{

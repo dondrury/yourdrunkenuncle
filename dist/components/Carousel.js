@@ -28,6 +28,19 @@ var Carousel = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, props));
 
+    _this.expand = function () {
+      var videos = _this.state.videos;
+      videos[0].opacity = videos[1].opacity = videos[2].opacity = 1;
+      videos[0].left = -100;
+      videos[2].left = 100;
+      _this.setState({ videos: videos });
+      setTimeout(function () {
+        var videos = _this.state.videos;
+        videos[0].z = videos[1].z = videos[2].z = 0;
+        _this.setState({ videos: videos });
+      }, 1000);
+    };
+
     _this.state = {
       feature: false,
       videos: []
@@ -35,7 +48,7 @@ var Carousel = function (_Component) {
 
     if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object') {
       _this.state.feature = 'https://www.youtube.com/embed/rpUclk4By7o?ecver=2';
-      _this.state.videos = ['https://www.youtube.com/embed/NjG6NVEZPec?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2', 'https://www.youtube.com/embed/QNLb5kdRKM8?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2', 'https://www.youtube.com/embed/PSmNum0XuS8?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2'];
+      _this.state.videos = [{ src: 'https://www.youtube.com/embed/NjG6NVEZPec?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2', left: 0, z: -2, opacity: 0 }, { src: 'https://www.youtube.com/embed/QNLb5kdRKM8?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2', left: 0, z: -1, opacity: 0 }, { src: 'https://www.youtube.com/embed/PSmNum0XuS8?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2', left: 0, z: -2, opacity: 0 }];
     } //do this to prevent client-side reload of the iframes
 
 
@@ -43,6 +56,9 @@ var Carousel = function (_Component) {
   }
 
   _createClass(Carousel, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {}
+  }, {
     key: 'render',
     value: function render() {
       //REQUIRED
@@ -52,13 +68,15 @@ var Carousel = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'feature' },
-          this.state.feature ? _react2.default.createElement('iframe', { src: this.state.feature, allowFullScreen: true }) : null
+          this.state.feature ? _react2.default.createElement('iframe', { src: this.state.feature, allowFullScreen: true, onLoad: this.expand }) : null
         ),
         _react2.default.createElement(
           'div',
           { className: 'videos' },
           this.state.videos.map(function (v, i, a) {
-            return _react2.default.createElement('iframe', { key: i, src: v, allowFullScreen: true });
+            return _react2.default.createElement('iframe', { key: i, src: v.src, allowFullScreen: true,
+              style: { transform: 'translate(' + v.left + '%,0)', zIndex: v.z, opacity: v.opacity }
+            });
           })
         )
       );

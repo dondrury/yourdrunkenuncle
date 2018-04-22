@@ -40,7 +40,7 @@ export default class Tours extends Component {
                 <div>Transpo</div>
               </h3>
               <div >
-                  <button >Find Out More</button>
+                  <a href='/tours'>Find Out More</a>
               </div>
 
             </div>

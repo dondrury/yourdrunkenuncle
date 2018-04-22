@@ -102,6 +102,19 @@ var Carousel = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, props));
 
+    _this.expand = function () {
+      var videos = _this.state.videos;
+      videos[0].opacity = videos[1].opacity = videos[2].opacity = 1;
+      videos[0].left = -100;
+      videos[2].left = 100;
+      _this.setState({ videos: videos });
+      setTimeout(function () {
+        var videos = _this.state.videos;
+        videos[0].z = videos[1].z = videos[2].z = 0;
+        _this.setState({ videos: videos });
+      }, 1000);
+    };
+
     _this.state = {
       feature: false,
       videos: []
@@ -109,7 +122,7 @@ var Carousel = function (_Component) {
 
     if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object') {
       _this.state.feature = 'https://www.youtube.com/embed/rpUclk4By7o?ecver=2';
-      _this.state.videos = ['https://www.youtube.com/embed/NjG6NVEZPec?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2', 'https://www.youtube.com/embed/QNLb5kdRKM8?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2', 'https://www.youtube.com/embed/PSmNum0XuS8?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2'];
+      _this.state.videos = [{ src: 'https://www.youtube.com/embed/NjG6NVEZPec?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2', left: 0, z: -2, opacity: 0 }, { src: 'https://www.youtube.com/embed/QNLb5kdRKM8?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2', left: 0, z: -1, opacity: 0 }, { src: 'https://www.youtube.com/embed/PSmNum0XuS8?list=PLR8Usl5iF-1p7QhZCs-_T7osJoZYzdba6&amp;ecver=2', left: 0, z: -2, opacity: 0 }];
     } //do this to prevent client-side reload of the iframes
 
 
@@ -117,6 +130,9 @@ var Carousel = function (_Component) {
   }
 
   _createClass(Carousel, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {}
+  }, {
     key: 'render',
     value: function render() {
       //REQUIRED
@@ -126,13 +142,15 @@ var Carousel = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'feature' },
-          this.state.feature ? _react2.default.createElement('iframe', { src: this.state.feature, allowFullScreen: true }) : null
+          this.state.feature ? _react2.default.createElement('iframe', { src: this.state.feature, allowFullScreen: true, onLoad: this.expand }) : null
         ),
         _react2.default.createElement(
           'div',
           { className: 'videos' },
           this.state.videos.map(function (v, i, a) {
-            return _react2.default.createElement('iframe', { key: i, src: v, allowFullScreen: true });
+            return _react2.default.createElement('iframe', { key: i, src: v.src, allowFullScreen: true,
+              style: { transform: 'translate(' + v.left + '%,0)', zIndex: v.z, opacity: v.opacity }
+            });
           })
         )
       );
@@ -244,15 +262,19 @@ var Header = function (_Component) {
             null,
             _react2.default.createElement(
               "a",
-              { href: "/merch" },
+              { href: "https://www.cafepress.com/yourdrunkenuncle" },
               "Merch"
             )
           )
         ),
-        _react2.default.createElement("img", { src: "img/YDU-head.png" }),
         _react2.default.createElement(
           "a",
-          { className: "logo", href: "" },
+          { href: "/" },
+          _react2.default.createElement("img", { src: "img/YDU-head.png" })
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: "logo", href: "https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ" },
           _react2.default.createElement("img", { src: "img/Subscribe.png" })
         )
       );
@@ -294,6 +316,10 @@ var _Tours = require('./Tours');
 
 var _Tours2 = _interopRequireDefault(_Tours);
 
+var _Merch = require('./Merch');
+
+var _Merch2 = _interopRequireDefault(_Merch);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -334,7 +360,8 @@ var Home = function (_Component) {
           _react2.default.createElement('div', null)
         ),
         _react2.default.createElement(_Carousel2.default, null),
-        _react2.default.createElement(_Tours2.default, null)
+        _react2.default.createElement(_Tours2.default, null),
+        _react2.default.createElement(_Merch2.default, null)
       );
     }
   }]);
@@ -344,7 +371,7 @@ var Home = function (_Component) {
 
 exports.default = Home;
 
-},{"./Carousel":3,"./Tours":10,"react":420}],7:[function(require,module,exports){
+},{"./Carousel":3,"./Merch":8,"./Tours":10,"react":420}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -441,11 +468,39 @@ var Tours = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'merch' },
+        _react2.default.createElement('div', { className: 'red-line' }),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'MERCH',
+          _react2.default.createElement('span', { className: 'dot' })
+        ),
         _react2.default.createElement(
           'div',
           { className: 'pure-g' },
-          _react2.default.createElement('div', { className: 'pure-u-1 pure-u-md-1-2' }),
-          _react2.default.createElement('div', { className: 'pure-u-1 pure-u-md-1-2' })
+          _react2.default.createElement(
+            'div',
+            { className: 'pure-u-1 pure-u-sm-1-2' },
+            _react2.default.createElement(
+              'p',
+              null,
+              'Find what you\'re looking for yourself or great gifts for your friends. Show your Tulsa pride with the Your Drunken Uncle logo on t-shirts, sweatshirts, mugs, stickers, and more.'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'button-container' },
+              _react2.default.createElement(
+                'a',
+                { href: 'https://www.cafepress.com/yourdrunkenuncle' },
+                'Find Out More'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'pure-u-1 pure-u-sm-1-2' },
+            _react2.default.createElement('img', { src: 'img/Merch.png', alt: 'our merchandise' })
+          )
         )
       );
     }
@@ -629,8 +684,8 @@ var Tours = function (_Component) {
               'div',
               null,
               _react2.default.createElement(
-                'button',
-                null,
+                'a',
+                { href: '/tours' },
                 'Find Out More'
               )
             )

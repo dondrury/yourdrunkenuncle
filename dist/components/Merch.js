@@ -34,11 +34,39 @@ var Tours = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'merch' },
+        _react2.default.createElement('div', { className: 'red-line' }),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'MERCH',
+          _react2.default.createElement('span', { className: 'dot' })
+        ),
         _react2.default.createElement(
           'div',
           { className: 'pure-g' },
-          _react2.default.createElement('div', { className: 'pure-u-1 pure-u-md-1-2' }),
-          _react2.default.createElement('div', { className: 'pure-u-1 pure-u-md-1-2' })
+          _react2.default.createElement(
+            'div',
+            { className: 'pure-u-1 pure-u-sm-1-2' },
+            _react2.default.createElement(
+              'p',
+              null,
+              'Find what you\'re looking for yourself or great gifts for your friends. Show your Tulsa pride with the Your Drunken Uncle logo on t-shirts, sweatshirts, mugs, stickers, and more.'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'button-container' },
+              _react2.default.createElement(
+                'a',
+                { href: 'https://www.cafepress.com/yourdrunkenuncle' },
+                'Find Out More'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'pure-u-1 pure-u-sm-1-2' },
+            _react2.default.createElement('img', { src: 'img/Merch.png', alt: 'our merchandise' })
+          )
         )
       );
     }

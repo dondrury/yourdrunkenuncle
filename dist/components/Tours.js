@@ -104,8 +104,8 @@ var Tours = function (_Component) {
               'div',
               null,
               _react2.default.createElement(
-                'button',
-                null,
+                'a',
+                { href: '/tours' },
                 'Find Out More'
               )
             )

@@ -1,0 +1,79 @@
+.merch{
+  &{
+    position: relative;
+  }
+  .red-line{
+    margin-top: 50px;
+    height:8px;
+    background-color: $dark-red;
+    margin-bottom: 20px;
+
+  }
+  h2{
+    font-family: arial;
+    color: $blue;
+    font-size:30px;
+    background-color: white;
+    padding: 5px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    position: absolute;
+    top:-42px;
+
+    left:209px;
+  }
+  .dot{
+    height: 5px;
+    width: 5px;
+    border-radius: 13px;
+    right: 32px;
+    top: 18px;
+    position: absolute;
+    background-color: $dark-red;
+  }
+  img{
+    position: relative;
+    max-width:100%;
+    float: right;
+    /* position: relative; */
+    top: -165px;
+    margin-bottom: -150px;
+    right: 0px;
+  }
+  .button-container{
+    margin: 20px 40px;
+  }
+  a{
+    display: block;
+     background-color: #4A8A8A;
+     border: none;
+     width: 115px;
+     color: white;
+     text-decoration: none;
+     border-radius: 5px;
+     padding: 8px 32px;
+     /* text-align: right; */
+     margin: 0 auto;
+     text-align: center;
+     white-space: nowrap;
+ }
+  a:hover{
+   background-color: $light-red;
+ }
+ p{
+   margin: 0 20px;
+ }
+
+ @media (max-width: 567px){
+   .button-container{
+     position: relative;
+    margin: 33px 109px;
+    top:89px;
+   }
+   img{
+     top: -144px;
+    z-index: -1;
+   }
+ }
+
+}

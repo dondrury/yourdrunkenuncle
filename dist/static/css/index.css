@@ -1973,7 +1973,7 @@ header {
   height: 48px;
   z-index: 1000; }
 
-header img {
+header a img {
   float: left;
   width: 60px;
   margin: 12px 20px; }
@@ -2070,15 +2070,18 @@ header ul > li > a:hover {
 .tours .inner-content {
   padding-right: 50px; }
 
-.tours button {
+.tours a {
+  display: inline-block;
   background-color: #6A1112;
   border: none;
+  color: white;
+  text-decoration: none;
   border-radius: 5px;
   padding: 8px 32px;
   /* text-align: right; */
   margin-left: 189px; }
 
-.tours button:hover {
+.tours a:hover {
   background-color: #B96161; }
 
 .tours .content img {
@@ -2107,28 +2110,76 @@ header ul > li > a:hover {
   bottom: 2px;
   left: 136px; }
 
-section.carousel .videos > iframe {
-  display: inline;
-  width: 300px;
-  height: 169px;
+.merch {
+  position: relative; }
+
+.merch .red-line {
+  margin-top: 50px;
+  height: 8px;
+  background-color: #6A1112;
+  margin-bottom: 20px; }
+
+.merch h2 {
+  font-family: arial;
+  color: #4A8A8A;
+  font-size: 30px;
+  background-color: white;
+  padding: 5px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  position: absolute;
+  top: -42px;
+  left: 209px; }
+
+.merch .dot {
+  height: 5px;
+  width: 5px;
+  border-radius: 13px;
+  right: 32px;
+  top: 18px;
+  position: absolute;
+  background-color: #6A1112; }
+
+.merch img {
+  position: relative;
+  max-width: 100%;
+  float: right;
+  /* position: relative; */
+  top: -165px;
+  margin-bottom: -150px;
+  right: 0px; }
+
+.merch .button-container {
+  margin: 20px 40px; }
+
+.merch a {
+  display: block;
+  background-color: #4A8A8A;
   border: none;
-  margin-top: -10px;
-  margin-bottom: 10px;
-  margin-left: 8px;
-  margin-right: 8px; }
+  width: 115px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 8px 32px;
+  /* text-align: right; */
+  margin: 0 auto;
+  text-align: center;
+  white-space: nowrap; }
 
-section.carousel .videos {
-  margin-top: -202px;
-  padding-left: 10vw; }
+.merch a:hover {
+  background-color: #B96161; }
 
-@media (max-width: 1200px) {
-  section.carousel .videos {
-    padding-left: 0px; }
-  section.carousel .videos > iframe {
-    display: none; }
-  section.carousel .videos > iframe:first-child {
-    display: block;
-    margin: 0 auto; } }
+.merch p {
+  margin: 0 20px; }
+
+@media (max-width: 567px) {
+  .merch .button-container {
+    position: relative;
+    margin: 33px 109px;
+    top: 89px; }
+  .merch img {
+    top: -144px;
+    z-index: -1; } }
 
 section.carousel .feature {
   background-color: #A83A3A;
@@ -2138,12 +2189,18 @@ section.carousel .feature {
   width: 400px;
   height: 200px;
   position: relative;
-  top: -201px; }
+  z-index: 1;
+  top: -201px;
+  margin-bottom: -201px; }
 
-section.carousel div.feature iframe {
-  border: none;
-  overflow: hidden;
+section.carousel .feature iframe {
   border-radius: 5px;
+  border: none;
+  z-index: auto;
+  padding: 0px;
+  position: relative;
+  right: auto;
+  top: 0px;
   width: 100%;
   height: 100%; }
 
@@ -2162,6 +2219,22 @@ section.carousel div.feature:after {
 
 section.carousel div.feature:hover:after {
   display: none; }
+
+section.carousel .videos {
+  position: relative;
+  left: calc(50vw - 160px);
+  height: 200px;
+  top: -11px; }
+
+section.carousel .videos iframe {
+  border: none;
+  overflow: hidden;
+  position: absolute;
+  width: 321px;
+  height: 178px;
+  z-index: -1;
+  padding: 0 5px;
+  transition: all 2000ms ease-in-out; }
 
 @media (max-width: 470px) {
   section.carousel div.feature {

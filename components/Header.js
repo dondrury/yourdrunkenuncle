@@ -17,12 +17,15 @@ export default class Header extends Component{
               <a href="/tours">Tours</a>
             </li>
             <li>
-              <a href="/merch">Merch</a>
+              <a href="https://www.cafepress.com/yourdrunkenuncle">Merch</a>
             </li>
 
           </ul>
-          <img src="img/YDU-head.png" />
-          <a className="logo" href="">
+          <a href="/">
+              <img src="img/YDU-head.png" />
+          </a>
+
+          <a className="logo" href="https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ">
             <img  src="img/Subscribe.png" />
           </a>
 

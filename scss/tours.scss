@@ -40,16 +40,19 @@
     padding-right: 50px;
   }
 
-   button{
+   a{
+    display: inline-block;
     background-color: $dark-red;
     border: none;
+    color:white;
+    text-decoration: none;
     border-radius: 5px;
     padding: 8px 32px;
     /* text-align: right; */
     margin-left: 189px;
 
   }
-   button:hover{
+   a:hover{
     background-color: $light-red;
   }
 

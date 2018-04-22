@@ -50,15 +50,19 @@ var Header = function (_Component) {
             null,
             _react2.default.createElement(
               "a",
-              { href: "/merch" },
+              { href: "https://www.cafepress.com/yourdrunkenuncle" },
               "Merch"
             )
           )
         ),
-        _react2.default.createElement("img", { src: "img/YDU-head.png" }),
         _react2.default.createElement(
           "a",
-          { className: "logo", href: "" },
+          { href: "/" },
+          _react2.default.createElement("img", { src: "img/YDU-head.png" })
+        ),
+        _react2.default.createElement(
+          "a",
+          { className: "logo", href: "https://www.youtube.com/channel/UCPUGsJo_KV8vwtme58yOemQ" },
           _react2.default.createElement("img", { src: "img/Subscribe.png" })
         )
       );
